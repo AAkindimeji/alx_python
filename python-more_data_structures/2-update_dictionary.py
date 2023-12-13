@@ -9,20 +9,20 @@ def print_sorted_dictionary(my_dict):
     for k in keys:
         print("{}: {}".format(k, my_dict[k]))
 
-# Test cases
-a_dictionary = { 'language': "C", 'number': 89, 'track': "Low level" }
+# # Test cases
+# a_dictionary = { 'language': "C", 'number': 89, 'track': "Low level" }
 
-# Update an existing key/value pair
-new_dict = update_dictionary(a_dictionary, 'language', "Python")
-print_sorted_dictionary(new_dict)
-print("--")
-print_sorted_dictionary(a_dictionary)
+# # Update an existing key/value pair
+# new_dict = update_dictionary(a_dictionary, 'language', "Python")
+# print_sorted_dictionary(new_dict)
+# print("--")
+# print_sorted_dictionary(a_dictionary)
 
-print("--")
-print("--")
+# print("--")
+# print("--")
 
-# Add a new key/value pair
-new_dict = update_dictionary(a_dictionary, 'city', "San Francisco")
-print_sorted_dictionary(new_dict)
-print("--")
-print_sorted_dictionary(a_dictionary)
+# # Add a new key/value pair
+# new_dict = update_dictionary(a_dictionary, 'city', "San Francisco")
+# print_sorted_dictionary(new_dict)
+# print("--")
+# print_sorted_dictionary(a_dictionary)
