@@ -1,17 +1,13 @@
-from flask import Flask, request, render_template
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
-# ... previous routes ...
+# ... other routes (same as before) ...
 
-@app.route("/number_odd_or_even/<n>", strict_slashes=False)
+@app.route("/number_odd_or_even/<int:n>", strict_slashes=False)
 def number_odd_or_even(n):
-    if not n.isdigit():
-        return "Not a number", 404
-
-    number = int(n)
-    odd_or_even = "even" if number % 2 == 0 else "odd"
-    return render_template("6-number_odd_or_even.html", number=number, odd_or_even=odd_or_even)
+    even_or_odd = "even" if n % 2 == 0 else "odd"  # Determine odd/even
+    return render_template("6-number_odd_or_even.html", number=n, even_or_odd=even_or_odd)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
